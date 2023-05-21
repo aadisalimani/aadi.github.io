@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Linux Terminal Website</title>
+  <style>
+    /* ... Your existing CSS styles ... */
+
+    /* Media queries for responsive design */
+    @media screen and (max-width: 768px) {
+      /* CSS styles for screens up to 768px wide */
+      /* Adjust the styles as per your requirements */
+      .terminal-line,
+      .terminal-line a {
+        font-size: 16px;
+      }
+
+      .box {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      /* CSS styles for screens up to 480px wide */
+      /* Adjust the styles as per your requirements */
+      .terminal-line,
+      .terminal-line a {
+        font-size: 14px;
+      }
+
+      .box {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    /* CSS styles for slow loading animation */
+    body {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('loaded');
+    });
+  </script>
+
+  <div class="terminal">
+    <div class="header">
+      <div class="buttons">
+        <span class="button close"></span>
+        <span class="button minimize"></span>
+        <span class="button maximize"></span>
+      </div>
+      <span class="title">ACL Hacks 2023 Project</span>
+    </div>
+    <div class="content">
+      <p class="terminal-line">Aadi@ubuntu:~~> Welcome To My Website!</p>
+      <p class="terminal-line">Aadi@ubuntu:~~> neofetch</p>
+
+      <div class="neofetch-section">
+        <div>
+          <!-- ASCII Art -->
+          <pre class="ascii-art">
+          /$$$$$$                /$$/$$ 
+         /$$__  $$              | $|__/ 
+        | $$  \ $$ /$$$$$$  /$$$$$$$/$$ 
+        | $$$$$$$$|____  $$/$$__  $| $$
+        | $$__  $$ /$$$$$$| $$  | $| $$
+        | $$  | $$/$$__  $| $$  | $| $$
+        | $$  | $|  $$$$$$|  $$$$$$| $$
+        |__/  |__/\_______/\_______|__/
+          </pre>
+        </div>
+        <div id="neofetch"></div> <!-- Neofetch System Information -->
+      </div>
+
+      <div>
+        <span class="box green"></span>Green
+        <span class="box blue"></span>Blue
+      </div>
+      <p class="terminal-line">Aadi@ubuntu:~~> cd projects</p>
+      <p class="terminal-line">Aadi@ubuntu\projects:~~> ls</p>
+      <p class="terminal-line">Projects I have worked on over the years:</p>
+      <p class="project1"><a href="project1.html">- RatRig V-Minion Build (Click)</a></p>
+      <p class="project2"><a href="project2.html">- Voron Tridnet Build (Click)</a></p>
+      <p class="project3"><a href="project3.html">- CAD & Blender Projects (Click)</a></p>
+      <div>
+        <span class="box green1"></span>Green
+        <span class="box blue"></span>Blue
+        <span class="box red"></span>Red
+        <span class="box orange"></span>Orange
+
+      </div>
+    </div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="terminal">
+    <!-- Rest of your code -->
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var neofetch = document.getElementById('neofetch');
+
+      // Generate system information
+      var systemInfo = '';
+      systemInfo += '  OS: Ubuntu\n';
+      systemInfo += '  Kernel: 5.10.0-38-generic\n';
+      systemInfo += '  Uptime: 5 days, 2 hours, 27 minutes\n';
+      systemInfo += '  Shell: bash\n';
+      systemInfo += '  Packages: 1420 (dpkg), 5 (flatpak)\n';
+      systemInfo += '  CPU: Intel Core i7-8700K (12) @ 3.70GHz\n';
+      systemInfo += '  Memory: 16GB\n';
+      systemInfo += '  Disk: 500GB (23% used)\n';
+      systemInfo += '  Resolution: 1920x1080\n';
+      systemInfo += '  DE: GNOME\n';
+      systemInfo += '  WM: Mutter\n';
+      systemInfo += '  Terminal: gnome-terminal\n';
+      systemInfo += '  Terminal Font: Monospace\n';
+
+      // Display system information
+      neofetch.textContent = systemInfo;
+    });
+  </script>
+</body>
+
+</html>
